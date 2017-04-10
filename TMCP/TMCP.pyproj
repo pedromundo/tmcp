@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>616121d4-00cf-4f9d-878d-d2725216eaaa</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>TMCP</Name>
+    <RootNamespace>TMCP</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pyassimp\core.py" />
+    <Compile Include="pyassimp\errors.py" />
+    <Compile Include="pyassimp\formats.py" />
+    <Compile Include="pyassimp\helper.py" />
+    <Compile Include="pyassimp\postprocess.py" />
+    <Compile Include="pyassimp\structs.py" />
+    <Compile Include="pyassimp\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pyassimp\assimp.dll" />
+    <Content Include="pyassimp\core.pyc" />
+    <Content Include="pyassimp\errors.pyc" />
+    <Content Include="pyassimp\formats.pyc" />
+    <Content Include="pyassimp\helper.pyc" />
+    <Content Include="pyassimp\postprocess.pyc" />
+    <Content Include="pyassimp\structs.pyc" />
+    <Content Include="pyassimp\__init__.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pyassimp\" />
+  </ItemGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
